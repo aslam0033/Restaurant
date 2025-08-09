@@ -1,0 +1,932 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ###################################### UTILITY CLASSES ##################################### */
+.centre{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.line-height{
+    line-height: 1.5rem;
+}
+
+.word-space{
+    word-spacing: 1rem;
+}
+
+
+.text-gray{
+    color: rgb(75, 71, 71);
+}
+
+
+/* #################################### Navbar style ####################### */
+
+ .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: #fff;
+    opacity: 0.8;
+    z-index: 5;
+}
+ 
+.hamburger-lines,input[type="checkbox"]{
+    display: none;
+}
+
+.nav-bar-items{
+    list-style-type: none;
+    display: flex;
+    max-width: 50%;
+    padding-right: 20rem;
+}
+
+
+
+.nav-bar-element{
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.4em 0.5em;
+}
+
+.logo{
+    font-size: 3rem;
+    padding-left: 20rem;
+}
+
+.header-bar{
+    margin-bottom: 2rem;
+}
+
+
+/* ######################################### BACKGROUND IMAGE STYLE ####################################### */
+.background-image{
+    height: 400px;
+    max-height: 40%;
+    position: relative;
+   
+}
+
+.bg-image{
+     opacity: 0.5;
+    z-index: 1;
+}
+
+.advise{
+    position: absolute;
+    background-color: 4px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.advise h1{
+    margin-bottom: 0.5em;
+}
+
+.advise p{
+    margin-bottom: 1em;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: rgb(0, 123, 37);
+    padding: 1em;
+    border: 1px solid  rgb(0, 123, 37);
+    border-radius: 80px;
+    color: white;
+}
+
+/* ################################################# ABOUT PAGE STYLE ############################################ */
+.fruit{
+    height: auto;
+    position: relative;
+      right: -120%;
+      animation: photo 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes photo{
+    from{
+        right: -120%;
+    }
+    to{
+        right: 0%;
+    }
+}
+
+.about-us{
+    padding-bottom: 2rem;
+    position: relative;
+   left: -120%;
+   animation: about 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes about{
+    from{
+        left: -120%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+.about-page{
+    display: flex;
+}
+
+.main-head{
+   margin-top: 1em; 
+   font-size: 2.5rem;
+}
+
+.sub-head{
+    font-size: 2rem;
+    margin-top: 1em;
+    margin-bottom: 0.46em;
+    
+}
+
+.about-us p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+
+/* ############################################ TYPE OF FOOD STYLE ####################################################### */
+.type-image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-type{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+
+.image-type{
+    height: 30rem;
+    width: 35rem;
+}
+
+
+.image-type1,.image-type2,.image-type3{
+    height: 30rem;
+    width: 35rem;
+    position: relative;
+}
+
+.fruit-head{
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+.btn1{
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+
+.image-type1::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.819);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+     transition: all 0.2s ease-in ;
+    opacity: 0;
+    z-index: 1;
+}
+
+.image-type1:hover .fruit-head{
+    top: 40%;
+    color: #fff;
+    left: 35%;
+    opacity: 1;
+    z-index: 2;
+}
+.image-type1:hover .btn1{
+    top: 50%;
+    left: 30%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-type1:hover::after{
+    opacity: 1;
+}
+.veg{
+  position: absolute;
+    top: 40%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+.btn2{
+   position: absolute;
+    top: 50%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+.image-type2::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.819);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+     transition: all 0.2s ease-in ;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+
+.image-type2:hover .veg{
+    top: 40%;
+    left: 35%;
+    opacity: 1;
+    color: #fff;
+    z-index: 2;
+}
+.image-type2:hover .btn2{
+    top: 50%;
+    left: 35%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-type2:hover::after{
+    opacity: 1;
+}
+
+
+.grain-head{
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+.btn3{
+   position: absolute;
+    top: 50%;
+    left: -20%;
+    transition: all 0.2s ease-in ;
+    opacity: 0;
+}
+
+.image-type3::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.819);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+     transition: all 0.2s ease-in ;
+    opacity: 0;
+    z-index: 1;
+}
+
+.image-type3:hover .grain-head{
+    top: 40%;
+    left: 35%;
+    opacity: 1;
+    z-index: 2;
+    color: #fff;
+}
+.image-type3:hover .btn3{
+    top: 50%;
+    left: 30%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-type3:hover::after{
+    opacity: 1;
+}
+
+
+
+
+/* ############################################ FOOD-MENU STYLE ####################################################### */
+.food-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.menu-list{
+    width: 49%;
+}
+
+.item{
+    width: 100%;
+    height: 21.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fm-image{
+    clip-path: circle(50% at 50% 50%);
+}
+
+.f-img{
+    width: 40%;
+}
+
+.details{
+    margin-top: 5rem;
+    width: 58%;
+}
+
+.details h1{
+    font-size: 1.8rem;
+}
+
+.details p{
+    font-size: 1.4rem;
+}
+
+span{
+    color: blue;
+}
+
+/* ########################################## Reviews Style ########################################### */
+.reviews{
+    background-color: rgb(230, 220, 220);
+    height: 45rem;
+   
+}
+
+.review-details{
+     display: flex;
+    justify-content: space-between;
+}
+
+.customer{
+    width: 31%;
+    text-align: center;
+    position: relative;
+}
+
+.review-head{
+    padding-top: 1em;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.color{
+    color: rgb(248, 93, 3);
+}
+
+.male1{
+    object-fit: cover;
+    width: 40%;
+    height: 60%;
+    clip-path:circle(40% at 50% 50%)
+}
+.male2{
+    object-fit: cover;
+    width: 40%;
+    height: 60%;
+    clip-path: circle(40% at 50% 50%);
+}
+.male3{
+    object-fit: cover;
+    width: 40%;
+    height: 60%;
+    clip-path: circle(40% at 50% 50%);
+}
+.reviewer-details{
+    position: relative;
+}
+
+.reviewer-details p{
+    position: absolute;
+    top: 90%;
+    left: 44%;
+}
+
+.review{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+/* ######################################################## Contact us style ################################################# */
+
+.contact-us{
+    background-color: rgb(205, 196, 196);
+}
+
+.contact-page{
+   padding: 2rem;
+    display: flex;
+}
+
+input,textarea{
+    display: block;
+    color: rgb(95, 93, 93);
+    margin-bottom: 2em;
+    padding: 2em auto;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+}
+
+textarea{
+    height: 15rem;
+}
+
+.contact{
+    padding-left: 0.4rem;
+    background-color: white;
+    width: 50%;
+}
+
+.restaurant-image{
+    object-fit: cover;
+    width: 50%;
+    height: auto;
+}
+
+.contact h1{
+    margin-top: 1em;
+    font-size: 3rem;
+    margin-bottom: 2em;
+}
+
+.contact .submit{
+    padding: auto 2em;
+}
+
+
+/* ##################################### footer style ################################# */
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.863);
+    height: 4rem;
+}
+footer p{
+    padding-top: 1.5em;
+}
+
+
+/* #################################### making website responsive ##################################### */
+@media (max-width:500px){
+html{
+    padding-left: 5px;
+}
+body .nav-bar{
+    display: block;
+    position: relative;
+    opacity: 0.5;
+    z-index: 5;
+    position: sticky;
+}
+body .logo{
+    padding-left: 80vw;
+}
+
+body .nav-bar ul{
+    position: absolute;
+    top: 0%;
+    left: -80%;
+    padding-top: 4.3rem;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.833);
+    transition: all 0.2s ease-in-out;
+}
+
+
+body input[type="checkbox"],.hamburger-lines{
+    display: block;
+}
+
+body input[type="checkbox"]{
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    height: 4rem;
+    width: 3.5rem;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+body .hamburger-lines{
+   border: 2px solid black;
+}
+
+body .hamburger-menu{
+    position: absolute;
+    top: 1.5%;
+    left: 2%;
+    height: 3.2rem;
+    width: 3.5rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input[type="checkbox"]:checked ~.nav-bar-items{
+      top: 0%;
+    left: 0%;
+}
+
+input[type="checkbox"]:checked ~.nav-bar-items .nav-bar-element{
+    color: #fff;
+}
+
+.about-page{
+    padding-left: 10px;
+    width: 100vw;
+}
+
+.img-phone{
+    width: 100%;
+}
+
+.type-image{
+    display: block;
+}
+
+.image-type1{
+    margin-bottom: 1rem;
+}
+.image-type2{
+    margin-bottom: 1rem;
+}
+
+.food-menu{
+    display: block;
+}
+
+.menu-list{
+    width: 97vw;
+}
+
+.fm-image{
+    clip-path: circle(40% at 50% 50%);
+}
+
+.review-details{
+    display: flex;
+}
+.reviews {
+    background-color: rgb(230, 220, 220);
+    height: 27rem;
+}
+
+.review{
+    font-size: 1rem;
+    line-height: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.male1{
+    clip-path: circle(30% at 45% 35%);
+}
+
+.male2{
+    clip-path: circle(30% at 45% 30%);
+}
+
+.male3{
+    clip-path: circle(30% at 45% 37%);
+}
+
+.reviewer-details .name {
+    position: absolute;
+    font-size: 0.8rem;
+    top: 65%;
+    left: 35%;
+}
+
+.contact {
+    padding-left: 0rem;
+    background-color: white;
+    width: 80vw;
+}
+
+.contact-page{
+    display: block;
+}
+
+.submit {
+    margin-left: 7em;
+    margin-bottom: 2em;
+}
+
+.contact-us .contact-page .restaurant-photo{
+        width: 80vw;
+    height: 25rem;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line1{
+    transform-origin: top left;
+    transform: rotate(50deg);
+    border: 2px solid white;
+    transition: all 0.2s ease-in-out;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line3{
+    transform-origin: top left;
+    transform: rotate(-52deg);
+    border: 2px solid white;
+    transition: all 0.2s ease-in-out;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line2{
+    display: none;
+}
+
+.image-type1,.image-type2,.image-type3{
+    width: 80vw;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+}
+
+.image-type{
+    height: 95%;
+    width: 80vw;
+}
+}
+@media (min-width:501px) and (max-width:768px){
+body .nav-bar{
+    display: block;
+    position: relative;
+     z-index: 5;
+    position: sticky;
+}
+body .logo{
+    padding-left: 80vw;
+}
+
+body .nav-bar ul{
+    position: absolute;
+    top: 0%;
+    left: -80%;
+    padding-top: 4.3rem;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.833);
+    transition: all 0.2s ease-in-out;
+}
+
+
+body input[type="checkbox"],.hamburger-lines{
+    display: block;
+}
+
+body input[type="checkbox"]{
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    height: 4rem;
+    width: 3.5rem;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+body .hamburger-lines{
+   border: 2px solid black;
+}
+
+body .hamburger-menu{
+    position: absolute;
+    top: 1.5%;
+    left: 2%;
+    height: 3.2rem;
+    width: 3.5rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input[type="checkbox"]:checked ~.nav-bar-items{
+      top: 0%;
+    left: 0%;
+}
+
+input[type="checkbox"]:checked ~.nav-bar-items .nav-bar-element{
+    color: #fff;
+}
+
+.about-page{
+    width: 100vw;
+}
+
+.img-phone{
+    width: 93%;
+}
+
+.type-image{
+    display: block;
+}
+
+.image-type1,.image-type2,.image-type3{
+    height: 50vh;
+}
+
+.image-type1{
+    margin-bottom: 1rem;
+}
+.image-type2{
+    margin-bottom: 1rem;
+}
+
+.food-menu{
+    display: block;
+}
+
+.menu-list{
+    width: 97vw;
+}
+
+.fm-image{
+    clip-path: circle(40% at 50% 50%);
+}
+
+.review-details{
+    display: flex;
+}
+
+.reviews{
+    height: 30rem;
+}
+
+.review{
+    font-size: 1rem;
+    line-height: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.male1{
+    clip-path: circle(30% at 45% 35%);
+}
+
+.male2{
+    clip-path: circle(30% at 45% 30%);
+}
+
+.male3{
+    clip-path: circle(30% at 45% 37%);
+}
+
+.reviewer-details p{
+    top: 65%;
+    left: 40%;
+}
+
+.contact {
+    padding-left: 0rem;
+    background-color: white;
+    width: 80vw;
+}
+
+.contact-page{
+    display: block;
+}
+
+.submit {
+    margin-left: 7em;
+    margin-bottom: 2em;
+}
+
+.contact-us .contact-page .restaurant-photo{
+        width: 80vw;
+    height: 25rem;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line1{
+    transform-origin: top left;
+    transform: rotate(48deg);
+    border: 2px solid white;
+    transition: all 0.2s ease-in-out;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line3{
+    transform-origin: top left;
+    transform: rotate(-50deg);
+    border: 2px solid white;
+    transition: all 0.2s ease-in-out;
+    z-index: 5;
+}
+
+input[type="checkbox"]:checked ~.hamburger-menu .hamburger-line2{
+    display: none;
+}
+
+.image-type1,.image-type2,.image-type3{
+    width: 80vw;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+}
+
+.image-type{
+    height: 95%;
+    width: 80vw;
+}
+
+.item{
+    width: 95%;
+}
+}
+@media(min-width:769px) and (max-width:1200px){
+
+.nav-bar-items{
+    list-style-type: none;
+    display: flex;
+    max-width: 60%;
+    padding-right: 5rem;
+}
+.logo{
+    padding-left: 5rem;
+}
+
+.image-type1,.image-type2,.image-type3 {
+    height: 25em;
+    width: 30vw;
+    position: relative;
+    margin-right: 0.5em;
+}
+.image-type{
+     height: 25em;
+    width: 30vw;
+}
+.fm-image {
+    clip-path: circle(40% at 50% 50%);
+}.male {
+    object-fit: cover;
+    width: 40%;
+    height: 60%;
+    clip-path: circle(33% at 50% 35%);
+}
+
+.reviewer-details p {
+    top: 70%
+}
+}
+
+@media (orientation: landscape) and (max-height:500px){
+    .name {
+    position: absolute;
+    top: 89%;
+    left: 43%;
+}
+}
